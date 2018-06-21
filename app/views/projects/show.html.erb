@@ -1,0 +1,24 @@
+<h1>Show project</h1>
+
+
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% pr = @project %>
+		<tr>
+			<td><%= pr.title %></td>
+			<td><%= pr.start_date %></td>
+			<td><%= pr.end_date %></td>
+			<td><%= pr.category %></td>
+			<td><%= pr.created_at %></td>
+			<td><%= pr.updated_at %></td>
+			<td><%= link_to "delete" ,project_path(pr),method: :delete,remote: :true,class:"ajaxGet"%></td>
+			<td><%= link_to "view" ,project_path(pr)%></td>
+		</tr>
+		<% #end %>
+	</tbody>
+</table>
